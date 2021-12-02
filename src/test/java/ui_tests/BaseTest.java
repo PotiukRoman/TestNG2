@@ -9,7 +9,7 @@ public class BaseTest {
 
     @AfterTest
     public void kill(){
-        driver.close();
-        driver.quit();
+     //   driver.close();
+      //  driver.quit();
     }
 }
