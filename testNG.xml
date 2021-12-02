@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="unit tests" configfailurepolicy="continue" parallel="classes" thread-count="3">
+    <test name="unit test">
+        <groups>
+            <run>
+                <include name="mult test"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="unit_test.GroupTest"></class>
+            <class name="unit_test.FirstTest"></class>
+            <class name="unit_test.PriorityTest"></class>
+        </classes>
+    </test>
+</suite>

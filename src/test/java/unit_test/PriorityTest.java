@@ -11,7 +11,7 @@ public class PriorityTest extends BaseTest{
     private final double FIRST_NUM = 10;
     private final double SECOND_NUM = 5;
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = "mult test")
     public void checkAdd(){
         double expectedResult = FIRST_NUM + SECOND_NUM;
         double actualResult = calculator.add(FIRST_NUM,SECOND_NUM);

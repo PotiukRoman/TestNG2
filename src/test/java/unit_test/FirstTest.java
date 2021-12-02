@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class FirstTest extends BaseTest{
 
-    @Test
+    @Test(groups = "mult test")
     public void checkSomething(){
         System.out.println("Hi");
 
