@@ -16,10 +16,12 @@ public class FirstTest extends BaseTest{
         driver.findElement(By.xpath("//input[@aria-label='Пошук']")).sendKeys("Hi there guy");
         Thread.sleep(2000);
       //  driver.findElement(By.xpath("//input[@name='btnK']")).click();
-        driver.findElement(By.cssSelector("input[class='gNO89b']")).click();
+       // driver.findElement(By.cssSelector("input[class='gNO89b']")).click();
+        driver.findElement(By.cssSelector("form .gNO89b")).click();
     }
 }
 //  //input[@name='btnK']
 // //input[@class='gNO89b']
 // //button[@class='kmjBcc']
 // //a[contains(text(),'Зображення')]
+// form .gNO89b
