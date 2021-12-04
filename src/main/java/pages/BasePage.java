@@ -10,21 +10,24 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 
 public class BasePage {
 
-    protected String startPage = "https://yy.xx/";
+    protected String startPage = "https://mega.nz/";
 
     protected WebDriver driver;
 
     public BasePage() {
+        System.out.println("Init driver before Login, Start page object is created, DriverManager.getDriver()");
         this.driver = DriverManager.getDriver();
 
     }
 
     public WebElement findByXpath(String xpath, Duration duration) {
+        System.out.println("findByXpath method is invoked");
         return driver.findElement(waitForElementVisible(By.xpath(xpath), duration.getSeconds()));
 
     }
 
     public WebElement findByCss(String css, Duration duration) {
+        System.out.println("findByCss method is invoked");
         return driver.findElement(waitForElementVisible(By.cssSelector(css), duration.getSeconds()));
 
     }

@@ -9,5 +9,7 @@ public class BaseTest {
     @AfterTest
     public void kill(){
         DriverManager.closeDriver();
+        System.out.println("AfterTest method kill() in BaseTest class in ui_tests package is run");
+
     }
 }
