@@ -22,6 +22,9 @@ public class LoginPage extends BasePage{
 
     }
 
+    public String getTextFromElement(){
+        return findByXpath("//h3[contains(text(),'Invalid email and/or password. Please try again.')]",Duration.ofSeconds(10)).getText();
+    }
 
 
 }

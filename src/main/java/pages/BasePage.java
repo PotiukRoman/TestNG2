@@ -10,7 +10,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 
 public class BasePage {
 
-    protected String startPage = "https://mega.nz/";
+    protected String startPage = "https://xxxx.yy/";
 
     protected WebDriver driver;
 
@@ -22,17 +22,19 @@ public class BasePage {
 
     public WebElement findByXpath(String xpath, Duration duration) {
         System.out.println("findByXpath method is invoked");
-        return driver.findElement(waitForElementVisible(By.xpath(xpath), duration.getSeconds()));
+        System.out.println("Duration xpath = "+ duration.getSeconds());
+        return driver.findElement( waitForElementVisible( By.xpath(xpath), duration.getSeconds() ) );
 
     }
 
     public WebElement findByCss(String css, Duration duration) {
         System.out.println("findByCss method is invoked");
-        return driver.findElement(waitForElementVisible(By.cssSelector(css), duration.getSeconds()));
+        System.out.println("Duration css = "+ duration.getSeconds());
+        return driver.findElement( waitForElementVisible( By.cssSelector(css), duration.getSeconds() ) );
 
     }
 
-    //налаштування Побіжне оочікування
+    //settings  fluent wait  public class WebDriverWait extends FluentWait<WebDriver>
     private WebDriverWait getWaiter(long timeOutInSecond) {
         WebDriverWait webDriverWait = new WebDriverWait(driver, timeOutInSecond);
         webDriverWait.ignoring(NoSuchElementException.class)
@@ -41,7 +43,7 @@ public class BasePage {
         return webDriverWait;
     }
 
-    // метод буде працювати з явним очікуванням
+    // the method will work with explicit expectations
     public By waitForElementVisible(By findStrategy, long timeOutInSecond) {
         getWaiter(timeOutInSecond).until(visibilityOfElementLocated(findStrategy));
         return findStrategy;

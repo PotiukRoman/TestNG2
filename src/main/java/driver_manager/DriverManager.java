@@ -11,7 +11,7 @@ public class DriverManager {
     private static void setDriver(){
         driver = new ChromeDriver(WebDriverConfig.configChrome());
         System.out.println("driver is set as ChromeDriver");
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);// використ неявне очікування погана практика
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);// use implicit expectations is a bad practice
     }
 
     public static WebDriver getDriver() {
