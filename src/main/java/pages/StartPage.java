@@ -10,8 +10,3 @@ public class StartPage extends BasePage{
         return new LoginPage();
     }
 }
-//  //span[contains(text(),'Log in')]/parent::button
-
-// //button[@class='mega-button top-login-button']
-
-// div .top-login-button

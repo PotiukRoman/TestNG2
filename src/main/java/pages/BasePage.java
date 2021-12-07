@@ -10,7 +10,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 
 public class BasePage {
 
-    protected String startPage = "https://xxxx.yy/";
+    protected String startPage = "https://auto.ria.com/uk/";
 
     protected WebDriver driver;
 
@@ -39,7 +39,8 @@ public class BasePage {
         WebDriverWait webDriverWait = new WebDriverWait(driver, timeOutInSecond);
         webDriverWait.ignoring(NoSuchElementException.class)
                 .ignoring(ElementNotInteractableException.class)
-                .ignoring(StaleElementReferenceException.class);
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(ElementClickInterceptedException.class);
         return webDriverWait;
     }
 
@@ -53,4 +54,6 @@ public class BasePage {
         DriverManager.getDriver().get(startPage);
         return new StartPage();
     }
+
+
 }

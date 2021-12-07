@@ -27,4 +27,33 @@ public class LoginPage extends BasePage{
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //input[@id='brandTooltipBrandAutocompleteInput-brand']
+
+    // //ul/li/a[contains(text(),'Nissan')]
+
+    // //label[@data-text='Марка']
+
+    // //label[@data-text='Модель']
+
+    //  Patrol
+
+    // //option[@value='1981']
+
+    // //select[@id='yearFrom']
+    // id='yearTo'
+    // //button[@type='submit']
+    // JN1WRG160U0883171    //span[contains(text(),'JN1WRG160U0883171')]
 }
